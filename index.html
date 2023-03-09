@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
     <title>iMessage Simulator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel='stylesheet' href='style.css'>
+    <script src='script.js' defer></script>
+  </head>
+  <body>
     <!-- Main Continer -->
-    <div class="container"> 
+    <div class='container'> 
         <!-- Title -->
         <h1>iMessage Simulator</h1>  
 
         <!-- Scroll Container w/ iMessages -->
-        <div class="imessage">
-          <p class="from-them">It was loud. We just laid there and said &ldquo;is this an earthquake? I think this is an earthquake.&rdquo;</p>
-          <p class="from-me">Like is this an earthquake just go back to sleep</p>
-        </div>
+        <div class='imessage'>
+          <p class='from-them'>It was loud. what the frick is going on boy what the heck. We just laid there and said &ldquo;is this an earthquake? I think this is an earthquake.&rdquo;</p>
+    <!-- <p class="from-them">what's up???</p> -->
+          <p class='from-me'>Like is this an earthquake just go back to sleep</p>
+    <!-- <p class="from-me">Hello there, what's up</p> -->
 
-        <!-- Text and Send Inputs -->
-        <div class="input-group">
-          <input type="text" name="" id="">
-          <input type="button" name="" id="">
+          <!-- Text and Send Inputs -->
+          <div class='input-group'>
+            <input type='text' name='message-text' id='input-text'>
+            <button onclick='createMessage()'>Send</button>
+          </div>
         </div>
-
+        
         <!-- Message Type Toggle -->
-        <input type="checkbox" name="" id="">
+        <input type='checkbox' name='message-type' id='input-checkbox'>
       </div>
-</body>
+  </body>
 </html>

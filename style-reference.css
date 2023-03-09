@@ -78,7 +78,7 @@ p.from-me ~ p.from-me:last-child {
   margin-bottom: 0.5rem;
 }
 
-/* Paragraphs with class ".from-me" */
+/* Paragraphs with class ".from-them" */
 p.from-them {
   align-items: flex-start;
   background-color: #e5e5ea;
@@ -93,7 +93,7 @@ p.from-them:before {
   transform: translate(0, -0.1rem);
 }
 
-/* After Paragraphs with class ".from-me" */
+/* After Paragraphs with class ".from-them" */
 p.from-them::after {
   background-color: #fff;
   border-bottom-right-radius: 0.5rem;

@@ -45,7 +45,6 @@ h1 {
 
 
 .imessage p {
-  background-color: bisque;
   border-radius: 1.15rem;
   line-height: 1.25;
   max-width: 75%;
@@ -88,3 +87,23 @@ p[class^="from-"] {
   width: fit-content;
 }
 
+p.from-them {
+  align-items: flex-start;
+  background-color: #e5e5ea;
+  color: #000;
+}
+
+p.from-them:before {
+  border-bottom-right-radius: 0.8rem 0.7rem;
+  border-left: 1rem solid #e5e5ea;
+  left: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-them::after {
+  background-color: #fff;
+  border-bottom-right-radius: 0.5rem;
+  left: 20px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}
