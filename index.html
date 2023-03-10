@@ -21,11 +21,15 @@
         
         <!-- Text and Send Inputs -->
         <div class='input-group'>
-          <input type='text' name='message-text' id='input-text'>
+          <input type='text' id='input-text'>
           <button onclick='sendMessage()'>Send</button>
         </div>
+        
         <!-- Message Type Toggle -->
-        <input type='checkbox' name='message-type' id='input-checkbox'>
+        <label class='switch'>
+          <input type='checkbox' id='input-checkbox'>
+          <span class='slider round'></span>
+        </label>
       </div>
   </body>
 </html>

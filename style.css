@@ -32,13 +32,13 @@ h1 {
 .imessage {
   background-color: #fff;
   border: 1px solid #e5e5ea;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   display: flex;
   flex-direction: column;
   font-family: "SanFrancisco";
   font-size: 1.05rem;
   margin: 0 auto 1rem;
-  padding: 0.5rem 1.25rem;
+  padding: .5rem 1.25rem;
   height: 50vh;
   overflow-y: auto;
   position: relative;
@@ -49,14 +49,14 @@ h1 {
   border-radius: 1.15rem;
   line-height: 1.25;
   max-width: 75%;
-  padding: 0.5rem 0.875rem;
+  padding: .5rem .875rem;
   position: relative;
   word-wrap: break-word;
 }
 
 .imessage p::before,
 .imessage p::after {
-  bottom: -0.1rem;
+  bottom: -.1rem;
   content: "";
   height: 1rem;
   position: absolute;
@@ -69,22 +69,22 @@ p.from-me {
 }
 
 p.from-me::before {
-  border-bottom-left-radius: 0.8rem 0.7rem;
+  border-bottom-left-radius: .8rem .7rem;
   border-right: 1rem solid #248bf5;
-  right: -0.35rem;
-  transform: translate(0, -0.1rem);
+  right: -.35rem;
+  transform: translate(0, -.1rem);
 }
 
 p.from-me::after {
   background: #fff;
-  border-bottom-left-radius: 0.5rem;
+  border-bottom-left-radius: .5rem;
   right: -40px;
   transform: translate(-30px, -2px);
   width: 10px;
 }
 
 p[class^="from-"] {
-  margin: 0.5rem 0;
+  margin: .5rem 0;
   width: fit-content;
 }
 
@@ -95,16 +95,76 @@ p.from-them {
 }
 
 p.from-them:before {
-  border-bottom-right-radius: 0.8rem 0.7rem;
+  border-bottom-right-radius: .8rem .7rem;
   border-left: 1rem solid #e5e5ea;
-  left: -0.35rem;
-  transform: translate(0, -0.1rem);
+  left: -.35rem;
+  transform: translate(0, -.1rem);
 }
 
 p.from-them::after {
   background-color: #fff;
-  border-bottom-right-radius: 0.5rem;
+  border-bottom-right-radius: .5rem;
   left: 20px;
   transform: translate(-30px, -2px);
   width: 10px;
+}
+
+/* Toggle Switch Styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position:absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: #248bf5;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #248bf5;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
