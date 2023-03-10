@@ -1,8 +1,14 @@
 // Make a new iMessage bubble with correct color
-const createMessage = (inText, inType) => {
+const createMessage = (inText) => {
     const newMessage = document.createElement('p');
-    console.log('here');
     const messages = document.getElementsByClassName('imessage')[0];
+    const checkbox = document.getElementById('input-checkbox');
+    
+    if (checkbox.checked) {
+        newMessage.className = 'from-me';
+    } else {
+        newMessage.className = 'from-them'
+    }
     
     newMessage.innerText = inText;
     messages.appendChild(newMessage);
