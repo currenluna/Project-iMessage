@@ -6,23 +6,36 @@
     <script src='script.js' defer></script>
   </head>
   <body>
+    
     <!-- Main Continer -->
     <div class='container'> 
-        <!-- Title -->
-        <h1>iMessage Simulator</h1>  
+      <!-- Welcome Animation
+      <div class='welcome-screen'>
+        <img src="SVG/graphic-welcome.svg" alt="iMessage">
+        <p>A Project by Curren Taber</p>
+      </div> -->
+
+      <!-- Title -->
+        <h2>iMessage Simulator</h2>  
 
         <!-- Scroll Container w/ iMessages -->
         <div class='imessage'>
-          <p class='from-them'>Somebody once told me the world is gonna roll me</p>
-    <!-- <p class="from-them">what's up???</p> -->
+          <div class="typing-bubble">
+            <div class="loading">
+              <div class="dot one"></div>
+              <div class="dot two"></div>
+              <div class="dot three"></div>
+            </div>
+            <div class="tail"></div>
+          </div>
           <p class='from-me'>I ain't the sharpest tool in the shed 🧅</p>
-    <!-- <p class="from-me">Hello there, what's up</p> -->
+          <p class='from-them'>Somebody once told me the world is gonna roll me</p>
         </div>
         
         <!-- Text and Send Inputs -->
         <div class='input-group'>
           <input type='text' id='input-text'>
-          <button onclick='sendMessage()'>Send</button>
+          <img src="SVG/arrow.svg" alt="send" onclick='sendMessage()'>
         </div>
         
         <!-- Message Type Toggle -->

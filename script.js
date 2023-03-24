@@ -2,7 +2,8 @@
 const sendMessage = () => {
     // Get DOM elements
     const newMessage = document.createElement('p');
-    const messages = document.getElementsByClassName('imessage')[0];
+    const messagesDiv = document.getElementsByClassName('imessage')[0];
+    const messages = messagesDiv.children;
     const text = document.getElementById('input-text');
     const checkbox = document.getElementById('input-checkbox');
 
@@ -17,7 +18,9 @@ const sendMessage = () => {
     }
     
     // Add the message to the div
-    messages.appendChild(newMessage);
+    if (text.value != '') {
+        messagesDiv.insertBefore(newMessage, messages[1]);
+    }
 
     // Clear the input field
     text.value = '';
